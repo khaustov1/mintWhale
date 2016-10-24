@@ -1,0 +1,55 @@
+html, body {
+    background: #3c3c46;
+    color: white;
+    font-family: 'Open Sans';
+}
+.list-checked {
+    list-style-type: none;
+    margin: 0 0 38px;
+    padding: 0;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 300;
+}
+.list-checked .icon-check {
+    position: relative;
+    top: 3px;
+    margin-right: 8px;
+}
+
+.list-checked li {
+    margin-bottom: 30px;
+    position: relative;
+    list-style-type: none;
+    text-indent: -1em;
+    list-style-position: inside;
+    margin-left: 2em;
+}
+.list-checked li:before {
+    font-family: 'fontcustom';
+    display: inline-block;
+    font-size: 1em;
+    position: relative;
+    top: 3px;
+    line-height: 0;
+    width: 1em;
+    color: white;
+    content: "\f104";
+}
+
+.list-checked.green li:before {
+    color: #4dd520;
+}
+.container {
+    padding: 60px 20px 0;
+}
+
+.icon {
+    text-align: center;
+    margin-bottom: 60px;
+    
+}
+.icon img {
+    width: 150px;
+    height: 150px;
+}

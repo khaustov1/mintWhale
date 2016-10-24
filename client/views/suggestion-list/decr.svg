@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>Button/Rounded small -</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Clean-try" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Рекомендации" transform="translate(-370.000000, -352.000000)" fill="#FFFFFF">
+            <g id="Group-3-Copy-3" transform="translate(0.000000, 273.000000)">
+                <g id="Group-7" transform="translate(24.000000, 79.000000)">
+                    <g id="Group" transform="translate(346.000000, 0.000000)">
+                        <g id="Group-4">
+                            <g id="Button/Rounded-small--" transform="translate(1.000000, 1.000000)">
+                                <path d="M27,54 C41.9116882,54 54,41.9116882 54,27 C54,12.0883118 41.9116882,0 27,0 C12.0883118,0 0,12.0883118 0,27 C0,41.9116882 12.0883118,54 27,54 Z M35.71858,24.793114 C36.732842,24.793114 37.5550639,25.6153358 37.5550639,26.6295978 C37.5550639,27.6438599 36.732842,28.4660817 35.71858,28.4660817 L17.9079124,28.4660817 C16.8936504,28.4660817 16.0714286,27.6438599 16.0714286,26.6295978 C16.0714286,25.6153358 16.8936504,24.793114 17.9079124,24.793114 L35.71858,24.793114 Z" id="Combined-Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

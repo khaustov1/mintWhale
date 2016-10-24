@@ -1,0 +1,54 @@
+version: 1
+
+capabilities:
+  - http
+  - events.app
+  - events.evo.receipt
+  - user.settings
+  #- device.settings
+
+endpoints:
+  http: # smart terminal requests
+    default: # {any-method} http://api.mintwhale.ru/test/{any-path}
+        url: http://api.kassa.mintwhale.ru/test
+        auth:
+          type: basic
+          login: user.settings.api.login
+          password: user.settings.api.password
+
+  events:
+    default:
+        url: http://api.mintwhale.ru/v100
+        alod: true
+        retention: 24h
+    app.*:
+      url: http://api.mintwhale.ru/evo/app/event
+    evo.receipt.*:
+      url: http://api.mintwhale.ru/evo/receipt/events
+
+  market: #site market.evotor.ru requests
+    default:
+        url: http://api.mintwhale.ru/admin
+
+user.settings:  #configurable at market.evotor.ru
+    api.login:
+      type: string
+    api.password:
+      type: string
+
+forms: #configuration at market.evotor.ru view and rules
+  - type: auth-form
+    fields:
+      - name: user.settings.api.login
+        title: Title 1
+        required: true
+        validator:
+            type: regex
+            value: \d+
+
+      - name: user.settings.api.password
+        title: Title 2
+        required: true
+        validator:
+            type: regex
+            value: \d+

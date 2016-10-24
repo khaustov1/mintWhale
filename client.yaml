@@ -1,0 +1,47 @@
+version: 1
+versionName: "1.0.1"
+
+packageName: mintWhale
+appName: "Mint Whale"
+appUUID: "8521d9e8-13e2-4f00-92cf-4a04a1a2c2cf"
+
+capabilities:
+  - inventory
+  - storage
+  - http
+  - event-bus
+  - receipts
+
+daemons:
+  - name: suggestion
+    events:
+      - evo.receipt.opened
+      - evo.receipt.productAdded
+      - evo.receipt.productRemoved
+      - evo.receipt.closed
+      - evo.receipt.clear
+      - app.suggestion.used
+    behavior: suggestion-daemon.js
+
+plugins:
+  - name: suggestion
+    moments:
+    - evo.receipt.items.fixed
+    point: before
+    behavior: before-receipt-fixed.js
+
+views:
+  - name: suggestion-list
+    header: "Предложите клиенту"
+    source: client/views/suggestion-list/view.html
+    scripts: # список скриптов которые должны быть подключены
+      - suggestion-list-view.js
+    styles: # список стилей которые должны быть подключены
+      - "*.css" # может подключить все файлы
+  - name: launcher
+    header: "Mint Whale"
+    source: client/views/mint-whale-blank/mint-whale-blank.html
+    scripts:
+      - no-script
+    styles:
+      - "*.css"
